@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+⚙️ Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✅ Search weather by city name
+✅ Shows temperature, humidity, and wind speed
+✅ Displays weather icons (sunny, rainy, cloudy, etc.) dynamically
+✅ Error handling for invalid or empty city names
+✅ Detects network issues (shows warning if no internet)
+✅ Secure API key handling using .env file
+✅ Full-stack architecture (React + Node.js + API)
 
-## Available Scripts
+🧩 Tech Stack
 
-In the project directory, you can run:
+Frontend: React.js, CSS, Tailwind (optional)
+Backend: Node.js, Express.js
+API: OpenWeatherMap API
+Tools: Axios, dotenv, CORS, fetch
 
-### `npm start`
+🏗️ Project Structure
+weather-project/
+│
+├── weather_backend/
+│   ├── server.js
+│   ├── .env
+│   └── package.json
+│
+└── weather_frontend/
+    ├── src/
+    │   ├── App.js
+    │   ├── App.css
+    │   ├── images/
+    │   │   ├── clear.png
+    │   │   ├── clouds.png
+    │   │   ├── drizzle.png
+    │   │   ├── rain.png
+    │   │   ├── snow.png
+    │   │   ├── mist.png
+    │   │   ├── humidity.png
+    │   │   └── wind.png
+    │   └── ...
+    ├── package.json
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔑 Environment Variables
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a .env file inside your backend folder (weather_backend) and add:
 
-### `npm test`
+OPENWEATHER_KEY=your_api_key_here
+PORT=5000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+You can get your free API key from OpenWeatherMap
+.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🚀 How to Run
+1️⃣ Start Backend:
+cd weather_backend
+npm install
+node server.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+✅ Server will run on http://localhost:5000
 
-### `npm run eject`
+2️⃣ Start Frontend:
+cd ../weather_frontend
+npm install
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ React app will run on http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🌍 How It Works
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User enters a city name in the React UI.
 
-## Learn More
+React sends a request → GET http://localhost:5000/weather?city={city}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Node backend receives it and calls OpenWeather API.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Backend sends weather data (temperature, humidity, wind, condition) to frontend.
 
-### Code Splitting
+React displays it beautifully with relevant icons.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+💡 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Add 5-day weather forecast
 
-### Making a Progressive Web App
+Show sunrise/sunset times
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Add location-based auto-detection
 
-### Advanced Configuration
+Use dynamic background colors for different weather types
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🧑‍💻 Author
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Shoaib Ul Hassan
+React + Node Developer
+📫 [LinkedIn:https://www.linkedin.com/in/tarun-kaushik-553b441a4]
