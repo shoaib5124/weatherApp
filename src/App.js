@@ -38,7 +38,7 @@ function App() {
       setData(null);
       return;
     }
-    fetch(`https://weatherapp-backend-production-c5a6.up.railway.app//weather?city=${City}`)
+    fetch(`https://weatherapp-backend-production-c5a6.up.railway.app/weather?city=${City}`)
    .then((response)=>{
     if(!response.ok)
     {
