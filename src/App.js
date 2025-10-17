@@ -10,7 +10,7 @@ import humidity from "./images/humidity.png";
 import wind from "./images/wind.png";
 import { useState } from 'react';
 function App() {
-  let apiKey = "13d46a690385993b46949cf88657ac9b";
+ 
   let [City, setCity]= useState('')
   let [Alldata,setData] =  useState(null);
   let [error, setError]= useState(false);
@@ -38,7 +38,7 @@ function App() {
       setData(null);
       return;
     }
-    fetch(`http://localhost:5000/weather?city=${City}`)
+    fetch(`https://weatherapp-backend-production-c5a6.up.railway.app//weather?city=${City}`)
    .then((response)=>{
     if(!response.ok)
     {
